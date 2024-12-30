@@ -321,9 +321,10 @@ nav svg {
 }
 #home_link:hover {
   background-color: #7ede87;
-  color: #000000;
+  color: #7ede87;
   box-shadow: 0px 0px 50px 60px #7ede87;
   font-weight: bolder;
+  animation: logoGlow 0.25s ease-in;
 }
 #home_link:hover.dark-mode {
   background-color: #37BF43;
@@ -487,6 +488,20 @@ nav svg {
     50% {
       background-color: #000000;
       box-shadow: 0px 0px 50px 20px #666666;
+    }
+  }
+  @keyframes logoGlow {
+    0% {
+      background-color: #37BF43;
+      box-shadow: 0px 0px 50px 0px #37BF43;
+    }
+    30% {
+      background-color: #37BF43;
+      box-shadow: 0px 0px 50px 60px #37BF43;
+    }
+    60% {
+      background-color: #7ede87;
+      box-shadow: 0px 0px 50px 60px #7ede87;
     }
   }
   /* IDs*/

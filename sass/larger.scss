@@ -196,6 +196,20 @@
           @include box-style-animated($secondary-font-color, $dark-grey, $pixel-0, $pixel-20);
         }
       }
+  
+      @keyframes logoGlow {
+        0% {
+          @include box-style-animated($secondary-color, $secondary-color, $pixel-0, $pixel-0);
+        }
+
+        30% {
+            @include box-style-animated($secondary-color, $secondary-color, $pixel-0, $pixel-60);
+        }
+  
+        60% {
+            @include box-style-animated($lighter-secondary-color, $lighter-secondary-color, $pixel-0, $pixel-60);
+        }
+      }
     
     
     /* IDs*/
@@ -203,9 +217,12 @@
       #dropDown {
         display: none;
       }
-    
+
+
     }
     
+
+
     @media screen and (min-width: 95em) {
       .hero_text {
         top: 20%;
