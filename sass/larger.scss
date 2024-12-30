@@ -91,6 +91,15 @@
           margin-bottom: 20px;
           box-shadow: 10px 10px 50px $secondary-font-color;
 
+          &:hover{
+            width: 100%;
+            max-width: 630px;
+            height: 100%;
+            max-height: 230px;
+            z-index: 2;
+            background-color: $transparent-lighter-secondary-color;
+        }
+
           svg {
             width: 400px;
 
@@ -118,6 +127,15 @@
             border-radius: 25px;
             margin-bottom: 20px;
             box-shadow: 10px 10px 50px $secondary-font-color;
+
+            &:hover{
+              width: 100%;
+              max-width: 630px;
+              height: 100%;
+              max-height: 230px;
+              z-index: 2;
+              background-color: $transparent-lighter-tertiary-color;
+          }
         }
       }
     
@@ -215,6 +233,24 @@
             @include box-style-animated($lighter-secondary-color, $lighter-secondary-color, $pixel-0, $pixel-60);
         }
       }
+
+      @keyframes zoomCard {
+        0% {
+            width: 100%;
+            max-width: 550px;
+            height: 100%;
+            max-height: 190px;
+            z-index: 2;
+        }
+    
+        50% {
+            width: 100%;
+            max-width: 650px;
+            height: 100%;
+            max-height: 250px;
+            z-index: 2;
+        }
+    }
     
     
     /* IDs*/
@@ -230,14 +266,11 @@
 
     @media screen and (min-width: 95em) {
       .hero_text {
-        top: 20%;
-        margin-left: 17%;
+        top: 10%;
         margin-top: 28.5px;
       }
 
       .hero_countdown {
-        top: 65%;
-        margin-top: -300px;
-        margin-right: 17%;
+        top: 55%;
       }
     }

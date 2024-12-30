@@ -56,22 +56,24 @@ const years = Math.floor(totalSeconds / (365.25 * 24 * 60 * 60)); // Approximate
 const months = Math.floor(totalSeconds / (30.44 * 24 * 60 * 60)); // Approximate month (30.44 days/month)
 const monthCalc = (Math.round(((months / 12) - years) * 12));
 
-// Calculate days
+//Calculate days
 const days = Math.floor(totalSeconds / (24 * 60 * 60));
-const dayCalc = (Math.round((((days/365.25) - years)* 365.25)/30));
+const dayCalc = (Math.round(((days / 30.44) - months) * 30.44));
 
 // Calculate hours
 const hours = Math.floor(totalSeconds / (60 * 60));
-const hourCalc = (Math.round(((hours/8760) - years) * 24));
+const hourCalc = (Math.round(((hours / 24) - days) * 24));
 
-// Calculate minutes
 const minutes = Math.floor(totalSeconds / 60);
-const minCalc = (Math.round(((minutes/525600) - years) * 60));
+const minCalc = (Math.round(((minutes / 60) - hours) * 60));
 
 // Calculate seconds
 const seconds = totalSeconds;
 const secCalc = (Math.round(((seconds/31540000) - years) * 31540000));
 const lastDigit = (Math.round(secCalc % 60));
+
+
+
 
 function pad(val) {
   var valString = val + "";

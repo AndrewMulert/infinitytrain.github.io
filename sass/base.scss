@@ -6,12 +6,12 @@ $monotone-primary-color: #36302b;
 $darker-primary-color: #4f3216;
 $lighter-secondary-color: #7ede87;
 $secondary-color: #37BF43;
-$transparent-lighter-secondary-color: #7ede87be;
+$transparent-lighter-secondary-color: #426A46be;
 $medium-secondary-color: #426A46;
 $darker-secondary-color: #153d19;
 $darkest-secondary-color: #0d170e;
 $transparent-secondary-color: #153d19be;
-$transparent-lighter-tertiary-color: #cc7064be;
+$transparent-lighter-tertiary-color: #943E32be;
 $tertiary-color: #943E32;
 $medium-tertiary-color: #5c271f;
 $darker-tertiary-color: #2e1612;
@@ -163,6 +163,15 @@ nav {
     @include colors($tertiary-color, $primary-font-color);
 }
 
+.card_link {
+    &:link {
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoration: none;
+    }
+}
+
 .circle {
     position: fixed;
     bottom: 20px;
@@ -209,20 +218,9 @@ nav {
     &_text {
         display: block;
         padding: 20px;
-        margin-top: -20px;
+        margin-top: -10px;
         @include colors($transparent-secondary-color, $primary-font-color);
         text-align: center;
-
-        
-        &:hover{
-            animation: zoomCard 1s ease-in-out;
-            width: 100%;
-            max-width: 630px;
-            height: 100%;
-            max-height: 230px;
-            z-index: 2;
-            background-color: $transparent-lighter-secondary-color;
-        }
 
         h2 {
             font-size: 2em;
@@ -256,16 +254,6 @@ nav {
 
         p {
             font-size: 1.5em;
-        }
-
-        &:hover{
-            animation: zoomCard 1s ease-in-out;
-            width: 100%;
-            max-width: 630px;
-            height: 100%;
-            max-height: 230px;
-            z-index: 2;
-            background-color: $transparent-lighter-tertiary-color;
         }
     }
 }
@@ -402,24 +390,6 @@ nav {
     width: 18%;
 }
 
-@keyframes zoomCard {
-    0% {
-        width: 100%;
-        max-width: 550px;
-        height: 100%;
-        max-height: 190px;
-        z-index: 2;
-    }
-
-    50% {
-        width: 100%;
-        max-width: 650px;
-        height: 100%;
-        max-height: 250px;
-        z-index: 2;
-    }
-}
-
 /* IDs */
 
 #alt_hero_image {
@@ -428,20 +398,21 @@ nav {
   
 #dropDown {
     position: absolute;
-    top: 15px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     z-index: 2;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     @include colors ($darker-secondary-color, $primary-font-color);
     border-style: none;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: background-color 1s;
 
     &:focus {
         @include colors($lighter-secondary-color, $secondary-font-color);
         @include border-values (solid, $medium-secondary-color, 2px, 5px);
         transition: background-color 1s;
+        border-radius: 25px;
       }
 }
   
