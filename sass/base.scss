@@ -195,12 +195,10 @@ nav {
         @include colors($transparent-secondary-color, $primary-font-color);
         text-align: center;
 
-        > p {
-            margin: 10px;
-        }
-
-        > h1 {
-            margin: 5px;
+        h2 {
+            font-size: 2em;
+            font-weight: 300;
+            margin:0;
         }
     }
 }
@@ -228,21 +226,23 @@ nav {
     }
       
     &_links{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 }
 
 .page_link {
     display: none;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: block;
+    min-width: 200px;
     font-weight: 400;
+    font-size: 1em;
     @include colors($medium-secondary-color, $primary-font-color);
 
     &:hover {
-        @include colors($tertiary-color, $darker-tertiary-color);
+        @include colors($primary-color, $monotone-primary-color);
         font-weight: 700;
         &.dark-mode {
             @include colors($medium-tertiary-color, $darker-tertiary-color);
@@ -368,6 +368,7 @@ nav {
 #home_link {
     position: relative;
     font-weight: 600;
+    min-width: 200px;
     @include colors($secondary-color, $primary-font-color);
     flex-grow: 4;
     align-self: auto;

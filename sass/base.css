@@ -122,11 +122,10 @@ nav svg {
   color: #ffffff;
   text-align: center;
 }
-.hero_text > p {
-  margin: 10px;
-}
-.hero_text > h1 {
-  margin: 5px;
+.hero_text h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
 }
 
 .nav_bar {
@@ -148,22 +147,24 @@ nav svg {
   text-align: center;
 }
 .nav_links {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .page_link {
   display: none;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: block;
+  min-width: 200px;
   font-weight: 400;
+  font-size: 1em;
   background-color: #426A46;
   color: #ffffff;
 }
 .page_link:hover {
-  background-color: #5B37BF;
-  color: #141218;
+  background-color: #BF7937;
+  color: #36302b;
   font-weight: 700;
 }
 .page_link:hover.dark-mode {
@@ -291,6 +292,7 @@ nav svg {
 #home_link {
   position: relative;
   font-weight: 600;
+  min-width: 200px;
   background-color: #37BF43;
   color: #ffffff;
   flex-grow: 4;
