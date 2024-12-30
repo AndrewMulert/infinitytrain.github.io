@@ -1,4 +1,6 @@
 year = document.querySelector("#year").textContent = new Date().getFullYear();
+console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
 
 let isSmallScreen = window.innerWidth < 768;
 
@@ -83,9 +85,6 @@ function pad(val) {
 }
 
 // Display the results
-console.log(timePast);
-console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
 
 yearLabel = document.getElementById("years").textContent = (`${years}`);
 monthLabel = document.getElementById("months").textContent = (`${pad(monthCalc)}`);
