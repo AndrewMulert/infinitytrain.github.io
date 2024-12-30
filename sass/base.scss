@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-$lighter-primary-color: #e0a975;
-$primary-color: #BF7937;
-$monotone-primary-color: #36302b;
-$darker-primary-color: #4f3216;
+$lighter-primary-color: #76f2d3;
+$primary-color: #37BF9F;
+$medium-secondary-color: #27856F;
+$monotone-primary-color: #515e5b;
+$darker-primary-color: #164A3E;
+$darkest-primary-color: #0D2D25;
 $lighter-secondary-color: #7ede87;
 $secondary-color: #37BF43;
-$transparent-lighter-secondary-color: #426A46be;
-$medium-secondary-color: #426A46;
-$darker-secondary-color: #153d19;
-$darkest-secondary-color: #0d170e;
-$transparent-secondary-color: #153d19be;
-$transparent-lighter-tertiary-color: #943E32be;
-$tertiary-color: #943E32;
-$medium-tertiary-color: #5c271f;
-$darker-tertiary-color: #2e1612;
-$transparent-tertiary-color: #2e1612be;
-$lighter-quaternary-color: #f6c98c;
-$quaternary-color: #cb8727;
-$medium-quaternary-color: #754e17;
-$darker-quaternary-color: #36250e;
+$transparent-lighter-secondary-color: #1e6724be;
+$medium-secondary-color: #1e6724;
+$darker-secondary-color: #164A1A;
+$darkest-secondary-color: #0D2D10;
+$transparent-secondary-color: #164A1Abe;
+$transparent-lighter-tertiary-color: #6B8426be;
+$tertiary-color: #9BBF37;
+$medium-tertiary-color: #6B8426;
+$darker-tertiary-color: #3C4A16;
+$transparent-tertiary-color: #3C4A16be;
+$lighter-quaternary-color: #6cbcf0;
+$quaternary-color: #409FDE;
+$medium-quaternary-color: #2F75A4;
+$darker-quaternary-color: #1E4B69;
 $primary-font-color:#ffffff;
 $secondary-font-color: #000000;
 $dark-grey:#666666;
@@ -160,7 +162,7 @@ nav {
     margin-top: -30px;
     text-align: center;
     width: 100%;
-    @include colors($tertiary-color, $primary-font-color);
+    @include colors($darker-quaternary-color, $primary-font-color);
 }
 
 .card_link {
@@ -297,7 +299,7 @@ nav {
     @include colors($medium-secondary-color, $primary-font-color);
 
     &:hover {
-        @include colors($tertiary-color, $lighter-quaternary-color); 
+        @include colors($tertiary-color, $secondary-font-color); 
         font-weight: 700;
         &.dark-mode {
             @include colors($medium-tertiary-color, $darker-quaternary-color);
