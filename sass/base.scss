@@ -14,7 +14,7 @@ $tertiary-color: #943E32;
 $medium-tertiary-color: #5c271f;
 $darker-tertiary-color: #2e1612;
 $transparent-tertiary-color: #2e1612be;
-$lighter-quaternary-color: #edab4e;
+$lighter-quaternary-color: #f6c98c;
 $quaternary-color: #cb8727;
 $medium-quaternary-color: #754e17;
 $darker-quaternary-color: #36250e;
@@ -84,7 +84,7 @@ h1, h2, h3, a {
     font-family: Raleway, Calibri, sans-serif;
 }
 
-p, label {
+p, pre, label {
     font-family: Outfit, Arial, serif;
 }
 
@@ -204,12 +204,21 @@ nav {
             font-weight: 300;
             margin:0;
         }
+
+        svg {
+            width: 300px;
+
+            image {
+                width: 300px;
+            }
+        }
     }
 
     &_countdown {
         display: block;
+        grid-template-columns: repeat(13, 20px 1fr) ;
         padding: 20px;
-        margin-top: -20px;
+        margin-top: 0px;
         @include colors($transparent-tertiary-color, $primary-font-color);
         text-align: center;
         label {

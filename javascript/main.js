@@ -66,26 +66,28 @@ const hourCalc = (Math.round(((hours/8760) - years) * 24));
 
 // Calculate minutes
 const minutes = Math.floor(totalSeconds / 60);
-const minCalc = (totalSeconds - (minutes * 60));
+const minCalc = (Math.round(((minutes/525600) - years) * 60));
 
 // Calculate seconds
 const seconds = totalSeconds;
-const second2 = (Math.round(((seconds/31540000) - years) * 60));
+const secCalc = (Math.round(((seconds/31540000) - years) * 31540000));
+const lastDigit = (Math.round(secCalc % 60));
 
 // Display the results
 console.log(timePast);
 console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${second2} seconds`);
+console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
 
 yearLabel = document.getElementById("years").textContent = (`${years}`);
 monthLabel = document.getElementById("months").textContent = (`${monthCalc}`);
 dayLabel = document.getElementById("days").textContent = (`${dayCalc}`);
 hourLabel = document.getElementById("hours").textContent = (`${hourCalc}`);
 minuteLabel = document.getElementById("minutes").textContent = (`${minCalc}`);
+secondLabel = document.getElementById("seconds").textContent = (`${lastDigit}`);
 
 }
 
-countUp();
+setInterval(countUp, 1000);
 
 /*const startTime = new Date("2021-04-15 00:00:00");
 const currentTime = new Date();
