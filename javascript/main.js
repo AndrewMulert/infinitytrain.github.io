@@ -73,45 +73,6 @@ const seconds = totalSeconds;
 const secCalc = (Math.round(((seconds/31540000) - years) * 31540000));
 const lastDigit = (Math.round(secCalc % 60));
 
-// Display the results
-console.log(timePast);
-console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
-
-yearLabel = document.getElementById("years").textContent = (`${years}`);
-monthLabel = document.getElementById("months").textContent = (`${monthCalc}`);
-dayLabel = document.getElementById("days").textContent = (`${dayCalc}`);
-hourLabel = document.getElementById("hours").textContent = (`${hourCalc}`);
-minuteLabel = document.getElementById("minutes").textContent = (`${minCalc}`);
-secondLabel = document.getElementById("seconds").textContent = (`${lastDigit}`);
-
-}
-
-setInterval(countUp, 1000);
-
-/*const startTime = new Date("2021-04-15 00:00:00");
-const currentTime = new Date();
-
-const timePast = currentTime - startTime;
-const daysCalc = Math.floor(timePast / (1000 * 60 * 60 * 24)); 
-
-var daysLabel = document.getElementById("days");
-var minutesLabel = document.getElementById("minutes");
-var secondsLabel = document.getElementById("seconds");
-
-// Initialize totalSeconds with the initial number of seconds from daysCalc
-var totalSeconds = daysCalc * 24 * 60 * 60; 
-
-setInterval(setTime, 1000);
-
-daysLabel.innerHTML = daysCalc; 
-
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds%60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
-}
-
 function pad(val) {
   var valString = val + "";
   if(valString.length < 2) {
@@ -119,4 +80,20 @@ function pad(val) {
   } else {
     return valString;
   }
-}*/
+}
+
+// Display the results
+console.log(timePast);
+console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
+
+yearLabel = document.getElementById("years").textContent = (`${years}`);
+monthLabel = document.getElementById("months").textContent = (`${pad(monthCalc)}`);
+dayLabel = document.getElementById("days").textContent = (`${pad(dayCalc)}`);
+hourLabel = document.getElementById("hours").textContent = (`${pad(hourCalc)}`);
+minuteLabel = document.getElementById("minutes").textContent = (`${pad(minCalc)}`);
+secondLabel = document.getElementById("seconds").textContent = (`${pad(lastDigit)}`);
+
+}
+
+setInterval(countUp, 1000);
