@@ -6,10 +6,12 @@ $monotone-primary-color: #36302b;
 $darker-primary-color: #4f3216;
 $lighter-secondary-color: #7ede87;
 $secondary-color: #37BF43;
+$transparent-lighter-secondary-color: #7ede87be;
 $medium-secondary-color: #426A46;
 $darker-secondary-color: #153d19;
 $darkest-secondary-color: #0d170e;
 $transparent-secondary-color: #153d19be;
+$transparent-lighter-tertiary-color: #cc7064be;
 $tertiary-color: #943E32;
 $medium-tertiary-color: #5c271f;
 $darker-tertiary-color: #2e1612;
@@ -151,7 +153,7 @@ nav {
 /* classes */
 
 .banner {
-    grid-column: 1 / span 5;
+    grid-column: 2 / span 3;
     padding: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -211,6 +213,17 @@ nav {
         @include colors($transparent-secondary-color, $primary-font-color);
         text-align: center;
 
+        
+        &:hover{
+            animation: zoomCard 1s ease-in-out;
+            width: 100%;
+            max-width: 630px;
+            height: 100%;
+            max-height: 230px;
+            z-index: 2;
+            background-color: $transparent-lighter-secondary-color;
+        }
+
         h2 {
             font-size: 2em;
             font-weight: 300;
@@ -243,6 +256,16 @@ nav {
 
         p {
             font-size: 1.5em;
+        }
+
+        &:hover{
+            animation: zoomCard 1s ease-in-out;
+            width: 100%;
+            max-width: 630px;
+            height: 100%;
+            max-height: 230px;
+            z-index: 2;
+            background-color: $transparent-lighter-tertiary-color;
         }
     }
 }
@@ -377,6 +400,24 @@ nav {
     display: block;
     margin-left: 0%;
     width: 18%;
+}
+
+@keyframes zoomCard {
+    0% {
+        width: 100%;
+        max-width: 550px;
+        height: 100%;
+        max-height: 190px;
+        z-index: 2;
+    }
+
+    50% {
+        width: 100%;
+        max-width: 650px;
+        height: 100%;
+        max-height: 250px;
+        z-index: 2;
+    }
 }
 
 /* IDs */
