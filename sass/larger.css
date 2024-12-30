@@ -6,7 +6,7 @@ h1, h2, h3, a {
   font-family: Raleway, Calibri, sans-serif;
 }
 
-p {
+p, label {
   font-family: Outfit, Arial, serif;
 }
 
@@ -118,7 +118,7 @@ nav svg {
   display: block;
   padding: 20px;
   margin-top: -20px;
-  background-color: rgba(66, 106, 70, 0.7450980392);
+  background-color: rgba(21, 61, 25, 0.7450980392);
   color: #ffffff;
   text-align: center;
 }
@@ -126,6 +126,20 @@ nav svg {
   font-size: 2em;
   font-weight: 300;
   margin: 0;
+}
+.hero_countdown {
+  display: block;
+  padding: 20px;
+  margin-top: -20px;
+  background-color: rgba(46, 22, 18, 0.7450980392);
+  color: #ffffff;
+  text-align: center;
+}
+.hero_countdown label {
+  font-size: 3em;
+  outline: #37BF43;
+  outline-width: 2px;
+  text-shadow: 0 5px 10px #7ede87;
 }
 
 .nav_bar {
@@ -169,7 +183,7 @@ nav svg {
 }
 .page_link:hover.dark-mode {
   background-color: #5c271f;
-  color: #2e1612;
+  color: #36250e;
 }
 .page_link.dark-mode {
   background-color: #0d170e;
@@ -257,7 +271,7 @@ nav svg {
 
 /* IDs */
 #alt_hero_image {
-  background-color: rgba(92, 39, 31, 0.7450980392);
+  background-color: rgba(46, 22, 18, 0.7450980392);
 }
 
 #dropDown {
@@ -301,6 +315,7 @@ nav svg {
 #home_link:hover {
   background-color: #7ede87;
   color: #000000;
+  box-shadow: 0px 0px 50px 60px #7ede87;
   font-weight: bolder;
 }
 #home_link:hover.dark-mode {
@@ -318,10 +333,13 @@ nav svg {
   }
   footer {
     display: flex;
-    max-height: 60px;
+    max-height: 70px;
   }
   footer > p {
     width: 60%;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 20px;
   }
   main {
     grid-template-columns: 7% 40% 8% 40% 7%;
@@ -378,6 +396,20 @@ nav svg {
   }
   .hero_image {
     max-height: 725px;
+  }
+  .hero_countdown {
+    position: absolute;
+    top: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    min-width: 325px;
+    width: 60%;
+    max-width: 550px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 50px #000000;
   }
   .nav_link_container {
     float: left;
@@ -451,5 +483,8 @@ nav svg {
 @media screen and (min-width: 70em) {
   .hero_text {
     top: 20%;
+  }
+  .hero_countdown {
+    top: 65%;
   }
 }/*# sourceMappingURL=larger.css.map */

@@ -9,11 +9,11 @@ $secondary-color: #37BF43;
 $medium-secondary-color: #426A46;
 $darker-secondary-color: #153d19;
 $darkest-secondary-color: #0d170e;
-$transparent-secondary-color: #426A46be;
+$transparent-secondary-color: #153d19be;
 $tertiary-color: #943E32;
 $medium-tertiary-color: #5c271f;
 $darker-tertiary-color: #2e1612;
-$transparent-tertiary-color: #5c271fbe;
+$transparent-tertiary-color: #2e1612be;
 $lighter-quaternary-color: #edab4e;
 $quaternary-color: #cb8727;
 $medium-quaternary-color: #754e17;
@@ -84,7 +84,7 @@ h1, h2, h3, a {
     font-family: Raleway, Calibri, sans-serif;
 }
 
-p {
+p, label {
     font-family: Outfit, Arial, serif;
 }
 
@@ -205,6 +205,20 @@ nav {
             margin:0;
         }
     }
+
+    &_countdown {
+        display: block;
+        padding: 20px;
+        margin-top: -20px;
+        @include colors($transparent-tertiary-color, $primary-font-color);
+        text-align: center;
+        label {
+            font-size: 3em;
+            outline: $secondary-color;
+            outline-width: 2px;
+            text-shadow: 0 5px 10px $lighter-secondary-color;
+        }
+    }
 }
 
 .nav {
@@ -246,10 +260,10 @@ nav {
     @include colors($medium-secondary-color, $primary-font-color);
 
     &:hover {
-        @include colors($tertiary-color, $lighter-quaternary-color);
+        @include colors($tertiary-color, $lighter-quaternary-color); 
         font-weight: 700;
         &.dark-mode {
-            @include colors($medium-tertiary-color, $darker-tertiary-color);
+            @include colors($medium-tertiary-color, $darker-quaternary-color);
         }
     }
 
@@ -379,6 +393,7 @@ nav {
 
     &:hover {
         @include colors($lighter-secondary-color, $secondary-font-color);
+        box-shadow: 0px 0px 50px 60px $lighter-secondary-color;
         font-weight: bolder;
 
         &.dark-mode {

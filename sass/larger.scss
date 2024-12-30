@@ -15,10 +15,13 @@
     
       footer{
           display: flex;
-          max-height: 60px;
+          max-height: 70px;
   
           > p {
               width: 60%;
+              padding: 10px;
+              padding-top: 0px;
+              padding-bottom: 20px;
           }
       }
     
@@ -86,6 +89,21 @@
   
         &_image {
           max-height: 725px;
+        }
+
+        &_countdown {
+            position: absolute;
+            top: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            min-width: 325px;
+            width: 60%;
+            max-width: 550px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-shadow: 10px 10px 50px $secondary-font-color;
         }
       }
     
@@ -182,5 +200,9 @@
     @media screen and (min-width: 70em) {
       .hero_text {
         top: 20%;
+      }
+
+      .hero_countdown {
+        top: 65%;
       }
     }
