@@ -1,6 +1,4 @@
 year = document.querySelector("#year").textContent = new Date().getFullYear();
-console.log(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-console.log(`${years} years, ${monthCalc} months, ${dayCalc} days, ${hourCalc} hours, ${minCalc} minutes, ${secCalc} seconds`);
 
 let isSmallScreen = window.innerWidth < 768;
 
