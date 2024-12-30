@@ -2,7 +2,7 @@
 
 $lighter-primary-color: #76f2d3;
 $primary-color: #37BF9F;
-$medium-secondary-color: #27856F;
+$medium-primary-color: #27856F;
 $monotone-primary-color: #515e5b;
 $darker-primary-color: #164A3E;
 $darkest-primary-color: #0D2D25;
@@ -101,7 +101,7 @@ article {
 
 body {
     margin: $pixel-0;
-    @include colors($primary-color, $secondary-font-color);
+    @include colors($medium-primary-color, $secondary-font-color);
 
     &.dark-mode {
         @include colors($darker-primary-color, $primary-font-color);
