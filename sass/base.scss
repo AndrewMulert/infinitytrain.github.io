@@ -10,10 +10,14 @@ $medium-secondary-color: #426A46;
 $darker-secondary-color: #153d19;
 $darkest-secondary-color: #0d170e;
 $transparent-secondary-color: #426A46be;
-$tertiary-color: #5B37BF;
-$medium-tertiary-color: #4a3091;
-$darker-tertiary-color: #141218;
-$transparent-tertiary-color: #4a3091be;
+$tertiary-color: #943E32;
+$medium-tertiary-color: #5c271f;
+$darker-tertiary-color: #2e1612;
+$transparent-tertiary-color: #5c271fbe;
+$lighter-quaternary-color: #edab4e;
+$quaternary-color: #cb8727;
+$medium-quaternary-color: #754e17;
+$darker-quaternary-color: #36250e;
 $primary-font-color:#ffffff;
 $secondary-font-color: #000000;
 $dark-grey:#666666;
@@ -242,7 +246,7 @@ nav {
     @include colors($medium-secondary-color, $primary-font-color);
 
     &:hover {
-        @include colors($primary-color, $monotone-primary-color);
+        @include colors($tertiary-color, $lighter-quaternary-color);
         font-weight: 700;
         &.dark-mode {
             @include colors($medium-tertiary-color, $darker-tertiary-color);

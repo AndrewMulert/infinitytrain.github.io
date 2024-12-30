@@ -163,13 +163,13 @@ nav svg {
   color: #ffffff;
 }
 .page_link:hover {
-  background-color: #BF7937;
-  color: #36302b;
+  background-color: #943E32;
+  color: #edab4e;
   font-weight: 700;
 }
 .page_link:hover.dark-mode {
-  background-color: #4a3091;
-  color: #141218;
+  background-color: #5c271f;
+  color: #2e1612;
 }
 .page_link.dark-mode {
   background-color: #0d170e;
@@ -257,7 +257,7 @@ nav svg {
 
 /* IDs */
 #alt_hero_image {
-  background-color: rgba(74, 48, 145, 0.7450980392);
+  background-color: rgba(92, 39, 31, 0.7450980392);
 }
 
 #dropDown {
@@ -303,19 +303,12 @@ nav svg {
   color: #000000;
   font-weight: bolder;
 }
-#home_link:hover #home_svg {
-  stroke: black;
-}
 #home_link:hover.dark-mode {
   background-color: #37BF43;
   color: #ffffff;
 }
 #home_link.dark-mode {
   background-color: #426A46;
-}
-
-#home_svg {
-  stroke: white;
 }
 
 @media screen and (min-width: 40em) {
