@@ -6,7 +6,7 @@ h1, h2, h3, a {
   font-family: Raleway, Calibri, sans-serif;
 }
 
-p, label {
+p, pre, label {
   font-family: Outfit, Arial, serif;
 }
 
@@ -118,7 +118,7 @@ nav svg {
   display: block;
   padding: 20px;
   margin-top: -20px;
-  background-color: rgba(21, 61, 25, 0.7450980392);
+  background-color: rgba(21, 61, 25, 0.537254902);
   color: #ffffff;
   text-align: center;
 }
@@ -135,6 +135,7 @@ nav svg {
 }
 .hero_countdown {
   display: block;
+  grid-template-columns: repeat(13, 20px 1fr);
   padding: 20px;
   margin-top: 0px;
   background-color: rgba(46, 22, 18, 0.7450980392);
