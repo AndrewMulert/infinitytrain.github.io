@@ -169,6 +169,8 @@ nav svg {
 }
 .hero_countdown p {
   font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .nav_bar {
