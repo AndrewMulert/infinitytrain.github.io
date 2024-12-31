@@ -126,6 +126,7 @@ footer {
 main {
     display: $display-grid;
     grid-template-columns: $percent-10 $percent-80 $percent-10;
+    grid-template-rows: $percent-10 $percent-80 $percent-10;
     margin-top: $pixel-30;
 }
 
@@ -156,12 +157,14 @@ nav {
 
 .banner {
     grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
     padding: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: -30px;
     text-align: center;
     width: 100%;
+    height: 38px;
     @include colors($darker-quaternary-color, $primary-font-color);
 }
 
@@ -314,11 +317,29 @@ nav {
 }
 
 .row {
-    @include margin;
-    padding: 20px;
-    color: $secondary-font-color;
-    border-radius: 25px;
-    @include box-style ($lighter-primary-color, $secondary-font-color, $pixel-10);
+    &_1 {
+        @include margin;
+        padding: 20px;
+        color: $secondary-font-color;
+        border-radius: 25px;
+        @include box-style ($lighter-primary-color, $secondary-font-color, $pixel-10);
+        margin-top: 40px;
+        height: 80%;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    &_2{
+        @include margin;
+        padding: 20px;
+        color: $secondary-font-color;
+        border-radius: 25px;
+        @include box-style ($lighter-primary-color, $secondary-font-color, $pixel-10);
+        margin-top: 40px;
+        height: 70%;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
 
     &.dark-mode{
         @include colors($primary-color, $primary-font-color);

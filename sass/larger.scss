@@ -8,10 +8,10 @@
 @media screen and (min-width: 40em) {
   
   
-      article{
+      /*article{
           grid-column: 2 / span 3;
           grid-row: 1 / span 2;
-      }
+      }*/
     
       footer{
           display: flex;
@@ -27,6 +27,7 @@
     
       main {
         grid-template-columns: 7% 40% 8% 40% 7%;
+        height: 100%;
       }
     
       nav{
@@ -41,6 +42,7 @@
         padding: 10px;
         margin-top: -35px;
         max-width: 97%;
+        height: 16px;
       }
 
       .circle{
@@ -150,7 +152,20 @@
       }
     
       .row {
-          margin-top: 40px;
+          &_1 {
+            margin-top: 40px;
+            grid-column: 2 / span 1;
+            /*grid-row: 2 / span 1;*/
+            max-width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+
+          &_2 {
+            margin-top: 40px;
+            grid-column: 4 / span 1;
+            grid-row: 2 / span 1;
+          }
   
           &_image {
   
