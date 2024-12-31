@@ -169,6 +169,8 @@ nav svg {
 }
 .hero_countdown p {
   font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .nav_bar {
@@ -568,6 +570,10 @@ nav svg {
   #dropDown {
     display: none;
   }
+  #hero_single {
+    top: 20%;
+    margin-top: 28.5px;
+  }
 }
 @media screen and (min-width: 95em) {
   .hero_text {
@@ -576,5 +582,9 @@ nav svg {
   }
   .hero_countdown {
     top: 55%;
+  }
+  #hero_single {
+    top: 30%;
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=larger.css.map */
